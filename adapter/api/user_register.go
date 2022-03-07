@@ -25,6 +25,6 @@ type RegisterUserRes struct {
 }
 
 func (u User) Register(req RegisterUserReq) (res RegisterUserRes, err error) {
-
+	err = u.RegisterUser.Register(req.Name, req.Age, req.Balance)
 	return
 }
